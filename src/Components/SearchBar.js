@@ -1,6 +1,9 @@
 import React, {Fragment,useState} from "react"; 
 import {connect,useDispatch} from 'react-redux';
+<<<<<<< HEAD
 import { dispatch } from "../../../../AppData/Local/Microsoft/TypeScript/3.6/node_modules/rxjs/internal/observable/pairs";
+=======
+>>>>>>> first commit
 
 //Function Component
 const SearchBar = () =>{
@@ -57,4 +60,8 @@ class SearchBarClass extends React.Component{
     }
 
 }*/
+<<<<<<< HEAD
 export default connect()(SearchBar);
+=======
+export default connect()(SearchBar);
+>>>>>>> first commit

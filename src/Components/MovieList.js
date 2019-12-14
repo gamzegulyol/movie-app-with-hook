@@ -1,4 +1,5 @@
 import React from "react";
+import {connect } from "react-redux";
 
 const MovieList = () => {
     return(
@@ -9,5 +10,11 @@ const MovieList = () => {
 
     );
 };
+const mapStateToProps = (state) =>{
+    return{
+        loading: state.app.loading,
+        movies: state.app.movies
+    };
+};
 
-export default MovieList;
+export default connect(mapStateToProps)(MovieList);
