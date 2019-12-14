@@ -3,6 +3,7 @@ import React from "react";
 
 import Header from "./Components/Header";
 import SearchBar from "./Components/SearchBar";
+import MovieList from "./Components/MovieList";
 
 import "./App.css";
 
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <SearchBar></SearchBar>
+      <MovieList></MovieList>
     </div>
   );
 }
