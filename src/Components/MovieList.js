@@ -1,20 +1,33 @@
-import React from "react";
-import {connect } from "react-redux";
+import React from 'react';
+import { connect } from 'react-redux';
+const MovieList = ({ loadingP, moviesP, request }) => {
+    console.log(loadingP, moviesP)
+    if (loadingP === true) {
+        return (
+            <div>
+                <p>Loading</p>
+            </div>
+        );
 
-const MovieList = () => {
-    return(
+    }
+    return (
         <div>
-            <h5>Movie Title</h5>
-            <p>Movie Description</p>
+            {moviesP.map(item => (
+                <div key={item.imdbID}>
+                    <img src={item.Poster} alt="description" />
+                    <h5>{item.Title}</h5>
+                    <p>{item.Year}</p>
+                </div>
+            ))}
         </div>
-
     );
-};
-const mapStateToProps = (state) =>{
-    return{
-        loading: state.app.loading,
-        movies: state.app.movies
+}
+const mapStateToProps = (state) => {
+    return {
+        allProps: state.app.loading,
+        moviesP: state.app.movies
     };
-};
+}
+
 
 export default connect(mapStateToProps)(MovieList);

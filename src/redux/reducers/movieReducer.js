@@ -1,24 +1,23 @@
 const initialState = {
-    movies:[],
+    movies: [],
     loading: false,
+    request: false
+};
 
-}
-export default(state=initialState, action) => {
-    switch(action.type){
+export default (state = initialState, action) => {
+    switch (action.type) {
         case 'movie/request':
-            return{
+            return {
                 ...state,
-                loading:true
-            }
+                loading: true
+            };
         case 'movie/success':
-                return{
-                    ...state,
-                    movie:action.data,
-                    loading:true
-                    }
+            return {
+                ...state,
+                movies: action.data,
+                loading: false
+            };
         default:
             return state;
-
     }
-
-};
+}
