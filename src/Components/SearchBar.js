@@ -8,7 +8,10 @@ const SearchBar = () =>{
     const _onClick = () => {
        fetch("https://www.omdbapi.com/?s=man&apikey=4a3b711b").then(result=>{
            result.json().then(res =>{
+<<<<<<< HEAD
                dispatch({type:'movie/request'});
+=======
+>>>>>>> movielist component has created
             console.log("currentValue Function Component:",res);
            });
           
